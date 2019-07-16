@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(VCTargetsPath)\Microsoft.CppCommon.targets" />
 
   <PropertyGroup>
@@ -9,6 +9,7 @@
          that the user may have overridden in the UI. -->
     <CLToolExe Condition="$(UseClangCl)">$(ClangClExecutable)</CLToolExe>
     <LinkToolExe Condition="$(UseLldLink)">$(LldLinkExecutable)</LinkToolExe>
+    <LIBToolExe Condition="$(UseLlvmLib)">$(LlvmLibExecutable)</LIBToolExe>
   </PropertyGroup>
 
   <ItemGroup>
